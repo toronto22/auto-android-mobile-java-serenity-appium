@@ -1,4 +1,4 @@
-package io.github.toronto22.automation.interactions;
+package io.github.toronto22.automation.interactions.authentication;
 
 import io.github.toronto22.automation.model.User;
 import net.serenitybdd.screenplay.Actor;
@@ -37,8 +37,8 @@ public class Login implements Interaction {
                 Click.on(loginButton)
         );
     }
-
-    public static Login with(User user) {
+    @Step("login with credential: {0}")
+    public static Login withCredential(User user) {
         return instrumented(Login.class, user.getUsername(), user.getPassword());
     }
 }
