@@ -1,8 +1,8 @@
 package io.github.toronto22.automation.interactions.cart;
 
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
-import net.thucydides.core.annotations.Step;
 
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;

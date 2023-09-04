@@ -2,13 +2,13 @@ package io.github.toronto22.automation.scenarios;
 
 import io.github.toronto22.automation.data.UserInformation;
 import io.github.toronto22.automation.interactions.authentication.Login;
+import net.serenitybdd.annotations.Managed;
+import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.annotations.CastMember;
-import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Steps;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 

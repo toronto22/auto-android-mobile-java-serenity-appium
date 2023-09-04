@@ -10,4 +10,7 @@ public class LoginPage {
             By.xpath("//android.widget.EditText[@content-desc=\"test-Password\"]"));
     public static final Target loginButton = Target.the("Username Input").located(
             By.xpath("//android.view.ViewGroup[@content-desc=\"test-LOGIN\"]"));
+
+    public static final Target errorMessageLabel = Target.the("Error Message").located(
+            By.xpath("//android.view.ViewGroup[@content-desc=\"test-Error message\"]/android.widget.TextView"));
 }

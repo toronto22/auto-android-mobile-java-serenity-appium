@@ -1,11 +1,11 @@
 package io.github.toronto22.automation.interactions.authentication;
 
 import io.github.toronto22.automation.model.User;
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.thucydides.core.annotations.Step;
 
 import static io.github.toronto22.automation.ui.LoginPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;

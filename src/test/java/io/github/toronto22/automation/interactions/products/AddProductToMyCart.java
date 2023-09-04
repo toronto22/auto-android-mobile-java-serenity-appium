@@ -1,9 +1,9 @@
 package io.github.toronto22.automation.interactions.products;
 
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.actions.Click;
-import net.thucydides.core.annotations.Step;
 
 
 import static io.github.toronto22.automation.ui.ProductsPage.addToCardButtonByProductName;
