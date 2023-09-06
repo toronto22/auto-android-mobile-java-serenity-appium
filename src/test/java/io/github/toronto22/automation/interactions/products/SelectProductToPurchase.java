@@ -9,22 +9,22 @@ import net.serenitybdd.screenplay.actions.Click;
 import static io.github.toronto22.automation.ui.ProductsPage.addToCardButtonByProductName;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class AddProductToMyCart implements Interaction {
-    String itemName;
+public class SelectProductToPurchase implements Interaction {
+    String product;
 
-    public AddProductToMyCart(String itemName) {
-        this.itemName = itemName;
+    public SelectProductToPurchase(String itemName) {
+        this.product = itemName;
     }
 
-    @Step("{0} add product to my card")
+    @Step("{0} select product to purchase")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(addToCardButtonByProductName.of(itemName))
+                Click.on(addToCardButtonByProductName.of(product))
         );
     }
 
-    public static AddProductToMyCart with(String itemName) {
-        return instrumented(AddProductToMyCart.class, itemName);
+    public static SelectProductToPurchase with(String product) {
+        return instrumented(SelectProductToPurchase.class, product);
     }
 
 }

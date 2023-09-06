@@ -6,6 +6,9 @@ import org.openqa.selenium.By;
 public class BasePage {
     public static final Target navigationButton =  Target.the("Navigation Button").located(
             By.xpath("//android.view.ViewGroup[@content-desc=\"test-Menu\"]/android.view.ViewGroup/android.widget.ImageView"));
+
+    public static final Target cartIcon =  Target.the("Cart Icon").located(
+            By.xpath(""));
     //NAVIGATION
     public static final Target logoutButton =  Target.the("Logout Button").located(
             By.xpath("//android.view.ViewGroup[@content-desc=\"test-LOGOUT\"]"));
