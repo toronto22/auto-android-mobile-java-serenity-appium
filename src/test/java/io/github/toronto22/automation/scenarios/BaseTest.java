@@ -27,7 +27,7 @@ public class BaseTest {
         toronto.can(BrowseTheWeb.with(herMobileDevice));
 
         toronto.attemptsTo(
-                Login.withCredential(UserInformation.validUser)
+                Login.withCredential(UserInformation.torontoUser)
         );
     }
 }

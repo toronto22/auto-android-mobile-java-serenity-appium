@@ -18,7 +18,9 @@ public class SelectProductsToPurchase implements Interaction {
     @Step("{0} select products to purchase")
     public <T extends Actor> void performAs(T actor) {
         for (String product : products) {
-            SelectProductToPurchase.with(product);
+            actor.attemptsTo(
+                    SelectProductToPurchase.with(product)
+            );
         }
     }
 

@@ -3,11 +3,13 @@ package io.github.toronto22.automation.interactions.products;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
-import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.*;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 
 import static io.github.toronto22.automation.ui.ProductsPage.addToCardButtonByProductName;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class SelectProductToPurchase implements Interaction {
     String product;
