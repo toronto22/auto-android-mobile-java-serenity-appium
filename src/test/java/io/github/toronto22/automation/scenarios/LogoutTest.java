@@ -1,6 +1,6 @@
 package io.github.toronto22.automation.scenarios;
 
-import io.github.toronto22.automation.interactions.authentication.Logout;
+import io.github.toronto22.automation.tasks.authentication.Logout;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import org.junit.Test;

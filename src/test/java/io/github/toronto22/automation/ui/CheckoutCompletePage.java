@@ -5,5 +5,5 @@ import org.openqa.selenium.By;
 
 public class CheckoutCompletePage {
     public static final Target backHomeButton =  Target.the("Continue Button").located(
-            By.xpath(""));
+            By.xpath("//android.view.ViewGroup[@content-desc=\"test-BACK HOME\"]/android.widget.TextView"));
 }

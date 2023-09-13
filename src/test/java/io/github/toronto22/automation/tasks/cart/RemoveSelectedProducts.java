@@ -1,4 +1,4 @@
-package io.github.toronto22.automation.interactions.cart;
+package io.github.toronto22.automation.tasks.cart;
 
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;

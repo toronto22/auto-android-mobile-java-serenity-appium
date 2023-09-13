@@ -1,4 +1,4 @@
-package io.github.toronto22.automation.interactions.authentication;
+package io.github.toronto22.automation.tasks.authentication;
 
 import io.github.toronto22.automation.model.User;
 import net.serenitybdd.annotations.Step;

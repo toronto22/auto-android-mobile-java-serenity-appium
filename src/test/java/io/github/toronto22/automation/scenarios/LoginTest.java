@@ -1,7 +1,7 @@
 package io.github.toronto22.automation.scenarios;
 
 import io.github.toronto22.automation.data.UserInformation;
-import io.github.toronto22.automation.interactions.authentication.Login;
+import io.github.toronto22.automation.tasks.authentication.Login;
 import io.github.toronto22.automation.questions.ErrorMessage;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.annotations.Steps;

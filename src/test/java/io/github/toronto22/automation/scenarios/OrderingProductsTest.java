@@ -1,8 +1,7 @@
 package io.github.toronto22.automation.scenarios;
 
-import io.github.toronto22.automation.interactions.cart.CheckoutProductsInMyCart;
-import io.github.toronto22.automation.interactions.products.SelectProductsToPurchase;
-import net.serenitybdd.core.Serenity;
+import io.github.toronto22.automation.tasks.cart.CheckoutProductsInMyCart;
+import io.github.toronto22.automation.tasks.products.SelectProductsToPurchase;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;

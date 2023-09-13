@@ -1,4 +1,4 @@
-package io.github.toronto22.automation.interactions.cart;
+package io.github.toronto22.automation.tasks.cart;
 
 import io.github.toronto22.automation.model.User;
 import net.serenitybdd.annotations.Step;
