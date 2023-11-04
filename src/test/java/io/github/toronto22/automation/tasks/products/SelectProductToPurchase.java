@@ -19,6 +19,7 @@ public class SelectProductToPurchase implements Interaction {
     @Step("{0} select product to purchase")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                Scroll.to(addToCardButtonByProductName.of(product)),
                 Click.on(addToCardButtonByProductName.of(product))
         );
     }

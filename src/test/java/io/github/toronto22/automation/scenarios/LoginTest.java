@@ -13,7 +13,6 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.annotations.CastMember;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
@@ -35,7 +34,6 @@ public class LoginTest {
     }
 
     @Test
-    @DisplayName("Login Successfully With Valid Credential")
     public void loginSuccessfullyWithValidCredential() {
         toronto.attemptsTo(
                 Login.withCredential(UserInformation.validUser)
@@ -43,7 +41,6 @@ public class LoginTest {
     }
 
     @Test
-    @DisplayName("Login Unsuccessfully With Invalid Credential")
     public void loginUnsuccessfullyWithInvalidCredential() {
         String errorMessage = "Username and password do not match any user in this service.";
         when(toronto).attemptsTo(
