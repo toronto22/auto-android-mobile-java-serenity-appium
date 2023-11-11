@@ -1,5 +1,6 @@
 package io.github.toronto22.automation.tasks.products;
 
+import io.github.toronto22.automation.interactions.scroll.ScrollAndClick;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
@@ -19,8 +20,7 @@ public class SelectProductToPurchase implements Interaction {
     @Step("{0} select product to purchase")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Scroll.to(addToCardButtonByProductName.of(product)),
-                Click.on(addToCardButtonByProductName.of(product))
+                ScrollAndClick.on(addToCardButtonByProductName.of(product))
         );
     }
 

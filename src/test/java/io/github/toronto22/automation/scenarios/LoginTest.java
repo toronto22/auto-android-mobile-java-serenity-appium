@@ -3,35 +3,19 @@ package io.github.toronto22.automation.scenarios;
 import io.github.toronto22.automation.data.UserInformation;
 import io.github.toronto22.automation.tasks.authentication.Login;
 import io.github.toronto22.automation.questions.ErrorMessage;
-import net.serenitybdd.annotations.Managed;
-import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.annotations.CastMember;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 @RunWith(SerenityRunner.class)
 public class LoginTest {
-    @Managed(driver = "Appium")
-    @Steps
-    public WebDriver herMobileDevice;
     @CastMember(name = "Toronto22")
     Actor toronto;
-
-    @Before
-    public void set_the_stage() {
-        OnStage.setTheStage(new OnlineCast());
-        toronto.can(BrowseTheWeb.with(herMobileDevice));
-    }
 
     @Test
     public void loginSuccessfullyWithValidCredential() {

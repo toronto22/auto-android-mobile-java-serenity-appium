@@ -1,5 +1,6 @@
 package io.github.toronto22.automation.tasks.cart;
 
+import io.github.toronto22.automation.interactions.scroll.ScrollAndClick;
 import io.github.toronto22.automation.model.User;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
@@ -26,16 +27,16 @@ public class CheckoutProductsInMyCart implements Interaction {
                 Click.on(cartIcon),
 
                 //Cart
-                Click.on(checkoutButton),
+                ScrollAndClick.on(checkoutButton),
 
                 //Checkout: Information
                 Enter.theValue(user.getFirstName()).into(firstNameInput),
                 Enter.theValue(user.getLastName()).into(lastNameInput),
                 Enter.theValue(user.getZipCode()).into(zipCodeInput),
-                Click.on(continueButton),
+                ScrollAndClick.on(continueButton),
 
                 //Checkout: Overview
-                Click.on(finishButton)
+                ScrollAndClick.on(finishButton)
         );
     }
 
