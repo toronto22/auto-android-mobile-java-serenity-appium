@@ -1,4 +1,4 @@
-package io.github.toronto22.automation.questions;
+package io.github.toronto22.automation.questions.login;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;

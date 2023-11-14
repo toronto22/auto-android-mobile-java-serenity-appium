@@ -1,14 +1,16 @@
-package io.github.toronto22.automation.scenarios;
+package io.github.toronto22.scenarios;
 
 import io.github.toronto22.automation.data.UserInformation;
 import io.github.toronto22.automation.tasks.authentication.Login;
-import io.github.toronto22.automation.questions.ErrorMessage;
+import io.github.toronto22.automation.questions.login.ErrorMessage;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.annotations.CastMember;
+import net.serenitybdd.screenplay.ensure.Ensure;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static io.github.toronto22.automation.ui.ProductsPage.titleLabel;
 import static net.serenitybdd.screenplay.GivenWhenThen.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 
@@ -20,7 +22,8 @@ public class LoginTest {
     @Test
     public void loginSuccessfullyWithValidCredential() {
         toronto.attemptsTo(
-                Login.withCredential(UserInformation.validUser)
+                Login.withCredential(UserInformation.validUser),
+                Ensure.that(titleLabel).isDisplayed()
         );
     }
 

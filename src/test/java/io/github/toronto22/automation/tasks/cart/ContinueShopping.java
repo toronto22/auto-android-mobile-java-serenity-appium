@@ -15,7 +15,7 @@ public class ContinueShopping implements Interaction {
         //TODO
     }
 
-    public static ContinueShopping with() {
+    public static ContinueShopping perform() {
         return instrumented(ContinueShopping.class);
     }
 

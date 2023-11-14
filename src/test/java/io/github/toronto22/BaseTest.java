@@ -1,4 +1,4 @@
-package io.github.toronto22.automation.scenarios;
+package io.github.toronto22;
 
 import io.github.toronto22.automation.data.UserInformation;
 import io.github.toronto22.automation.tasks.authentication.Login;
@@ -9,7 +9,7 @@ import org.junit.Before;
 
 public class BaseTest {
     @CastMember(name = "Toronto22")
-    Actor toronto;
+    protected Actor toronto;
 
 
     @Before
