@@ -20,6 +20,8 @@ import static net.serenitybdd.screenplay.GivenWhenThen.*;
 
 @RunWith(SerenityRunner.class)
 public class ViewingCartTest extends BaseTest {
+
+
     @Test
     public void customerViewThereCartAfterSelectProductsToPurchase() {
         List<String> items = new ArrayList<>();
@@ -29,6 +31,7 @@ public class ViewingCartTest extends BaseTest {
         items.add("Sauce Labs Fleece Jacket");
         items.add("Sauce Labs Onesie");
         items.add("Test.allTheThings() T-Shirt (Red)");
+
         when(toronto).attemptsTo(
                 SelectProductsToPurchase.with(items),
                 ViewMyCart.perform()
@@ -42,12 +45,23 @@ public class ViewingCartTest extends BaseTest {
     @Test
     public void customerRemoveProductsToBuyInThereCart() {
         List<String> items = new ArrayList<>();
+        items.add("Sauce Labs Bike Light");
+        items.add("Sauce Labs Backpack");
+        items.add("Sauce Labs Bolt T-Shirt");
+        items.add("Sauce Labs Fleece Jacket");
+        items.add("Sauce Labs Onesie");
+        items.add("Test.allTheThings() T-Shirt (Red)");
+
         List<String> removedItems = new ArrayList<>();
+        removedItems.add("Sauce Labs Bike Light");
+        removedItems.add("Sauce Labs Onesie");
+        removedItems.add("Test.allTheThings() T-Shirt (Red)");
         when(toronto).attemptsTo(
                 SelectProductsToPurchase.with(items),
                 ViewMyCart.perform(),
                 RemoveSelectedProducts.with(removedItems)
         );
+        items.removeAll(removedItems);
         then(toronto).should(
                 seeThat(SelectedProduct.consistOf(items), Matchers.is(true))
         );
@@ -56,7 +70,12 @@ public class ViewingCartTest extends BaseTest {
     @Test
     public void customerContinueToBuyMoreItem() {
         List<String> items = new ArrayList<>();
-        List<String> removedItems = new ArrayList<>();
+        items.add("Sauce Labs Bike Light");
+        items.add("Sauce Labs Backpack");
+        items.add("Sauce Labs Bolt T-Shirt");
+        items.add("Sauce Labs Fleece Jacket");
+        items.add("Sauce Labs Onesie");
+        items.add("Test.allTheThings() T-Shirt (Red)");
         when(toronto).attemptsTo(
                 SelectProductsToPurchase.with(items),
                 ViewMyCart.perform(),
