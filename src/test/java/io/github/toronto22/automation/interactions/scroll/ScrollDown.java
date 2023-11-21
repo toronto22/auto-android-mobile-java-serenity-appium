@@ -21,22 +21,33 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class ScrollDown implements Interaction {
     Target target;
+    int limit;
 
     public ScrollDown(Target target) {
         this.target = target;
+        limit = 5;
+    }
+
+    public ScrollDown(Target target, int limit) {
+        this.target = target;
+        this.limit = limit;
     }
 
     @Override
     public <T extends Actor> void performAs(T t) {
         AndroidDriver driver = (AndroidDriver) ((WebDriverFacade) BrowseTheWeb.as(t).getDriver()).getProxiedDriver();
-        WebElement element = downToElement(driver, By.xpath(target.getCssOrXPathSelector()));
+        downToElement(driver, By.xpath(target.getCssOrXPathSelector()), limit);
     }
 
     public static ScrollDown to(Target target) {
         return instrumented(ScrollDown.class, target);
     }
 
-    public static WebElement downToElement(AppiumDriver driver, By by, int limit) {
+    public static ScrollDown to(Target target, int limit) {
+        return instrumented(ScrollDown.class, target, limit);
+    }
+
+    public static void downToElement(AppiumDriver driver, By by, int limit) {
         int count = 0;
         WebElement element = null;
         boolean found = false;
@@ -67,10 +78,5 @@ public class ScrollDown implements Interaction {
         if (element == null) {
             throw new NotFoundException("Cannot find the element: " + by.toString());
         }
-        return element;
-    }
-
-    public static WebElement downToElement(AppiumDriver driver, By by) {
-        return downToElement(driver, by, 3);
     }
 }

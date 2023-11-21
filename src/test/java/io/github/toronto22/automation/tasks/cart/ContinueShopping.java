@@ -15,7 +15,7 @@ public class ContinueShopping implements Interaction {
     @Step("{0} continue shopping")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                ScrollAndClick.on(continueShoppingButton)
+                ScrollAndClick.on(continueShoppingButton, 15)
         );
     }
 
